@@ -9,7 +9,6 @@ import { CMS_NAME } from '../lib/constants'
 import PhotographersGrid from '../components/photographers-grid'
 
 export default function Index({ preview, allPhotographers }) {
-  console.log('allPhotographers', allPhotographers)
   return (
     <>
       <Layout preview={preview} alertMessage={''}>

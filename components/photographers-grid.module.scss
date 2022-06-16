@@ -1,19 +1,22 @@
 .photographers_grid_wrapper {
-
   h2 {
-    margin-bottom: 25px;
+    margin-bottom: 80px;
+  }
+
+  .info_albums_wrapper {
+    padding: 60px 30px 20px 30px;
   }
 
   .photographer_card {
     border: 1px solid black;
-    margin: 15px;
+    margin: 30px 15px 50px 15px;
     display: flex;
     border-top-left-radius: 50%;
     padding-bottom: 30px;
 
-    img {
-      width: 550px;
-      height: 550px;
+    .profile_picture {
+      width: 450px;
+      height: 450px;
       border-radius: 50%;
     }
   }

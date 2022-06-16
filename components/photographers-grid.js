@@ -1,4 +1,6 @@
 import React from 'react'
+import AlbumGrid from './album-grid'
+import Link from 'next/link'
 
 import styles from './photographers-grid.module.scss'
 
@@ -10,18 +12,17 @@ const PhotographersGrid = ({ photographers }) => {
       {photographers.map((photographer, index) => {
         return (
           <div className={styles.photographer_card} key={index}>
-
             {photographer.profilePicture &&
-              <img src={photographer.profilePicture.url} alt={photographer.profilePicture.title} />
+              <Link href={`/photographer/${photographer.slug}`}>
+                <img className={styles.profile_picture} src={photographer.profilePicture.url} alt={photographer.profilePicture.title} />
+              </Link>
             }
-            <div>
-              <p className='md:text-3xl font-bold'>{photographer.name}</p>
-              <p>{photographer.bio}</p>
-            </div>
-            <div>
-              {photographer.albumsCollection.items.map(album => {
-                return <div>{album.albumName}</div>
-              })}
+            <div className={styles.info_albums_wrapper}>
+              <div>
+                <p className='md:text-3xl font-bold'>{photographer.name}</p>
+                <p className='pl-5'>{photographer.bio}</p>
+              </div>
+              <AlbumGrid albums={photographer.albumsCollection.items} />
             </div>
           </div>
         )
