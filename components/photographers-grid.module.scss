@@ -1,0 +1,20 @@
+.photographers_grid_wrapper {
+
+  h2 {
+    margin-bottom: 25px;
+  }
+
+  .photographer_card {
+    border: 1px solid black;
+    margin: 15px;
+    display: flex;
+    border-top-left-radius: 50%;
+    padding-bottom: 30px;
+
+    img {
+      width: 550px;
+      height: 550px;
+      border-radius: 50%;
+    }
+  }
+}
