@@ -1,6 +1,6 @@
 import React from "react";
-import { getPhotographerBySlug } from '../../lib/api'
-import Layout from '../../components/layout'
+import { getPhotographerBySlug } from '../../../lib/api'
+import Layout from '../../../components/layout'
 
 const Photographer = ({ photographer, preview }) => {
 

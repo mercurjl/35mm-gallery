@@ -22,7 +22,7 @@ const PhotographersGrid = ({ photographers }) => {
                 <p className='md:text-3xl font-bold'>{photographer.name}</p>
                 <p className='pl-5'>{photographer.bio}</p>
               </div>
-              <AlbumGrid albums={photographer.albumsCollection.items} />
+              <AlbumGrid photographerSlug={photographer.slug} albums={photographer.albumsCollection.items} />
             </div>
           </div>
         )
