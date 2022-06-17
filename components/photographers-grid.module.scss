@@ -4,6 +4,7 @@
   }
 
   .info_albums_wrapper {
+    flex: 1;
     padding: 60px 30px 20px 30px;
   }
 
@@ -15,10 +16,12 @@
     padding-bottom: 30px;
 
     .profile_picture {
-      width: 450px;
-      height: 450px;
-      border-radius: 50%;
-      cursor: pointer;
+      flex: 1;
+      img {
+        width: 435px;
+        height: 435px;
+        border-radius: 50%;
+      }
     }
   }
 }

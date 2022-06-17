@@ -3,12 +3,20 @@ import { getAlbumBySlug } from '../../../../lib/api'
 import Layout from '../../../../components/layout'
 
 const Album = ({ album, preview }) => {
-  console.log('album', album)
-  const { albumName } = album
+  const { albumName, photosCollection } = album
   return (
     <Layout>
       <div>
-      {albumName}
+        <h1 className="text-7xl font-bold mb-4 border-black-500 border-b border-black">
+          {albumName}
+        </h1>
+        <div className="mb-5">
+          {photosCollection.items.map(photo => {
+            return (
+              <img className="mb-5 max-w-[1140px]" src={photo.url} alt={photo.title} />
+            )
+          })}
+        </div>
       </div>
     </Layout>
   )

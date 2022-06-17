@@ -15,10 +15,8 @@ export default function Index({ preview, allPhotographers }) {
         <Head>
           <title>35mm - Gallery</title>
         </Head>
-        <Container>
-          <Intro />
-          <PhotographersGrid photographers={allPhotographers} />
-        </Container>
+        <Intro />
+        <PhotographersGrid photographers={allPhotographers} />
       </Layout>
     </>
   )

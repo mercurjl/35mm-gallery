@@ -8,11 +8,13 @@ const AlbumGrid = ({ photographerSlug, albums }) => {
       {albums.map(album => {
         const { albumName, thumbnail, slug } = album
         return (
-          <Link href={`photographer/${photographerSlug}/album/${slug}`}>
-            <div className={styles.album_wrapper}>
-              <div className={styles.album_name}>{albumName}</div>
-              <img src={thumbnail.url} alt={albumName} />
-            </div>
+          <Link href={`${photographerSlug}/album/${slug}`}>
+            <a>
+              <div className={styles.album_wrapper}>
+                <div className={styles.album_name}>{albumName}</div>
+                <img src={thumbnail.url} alt={albumName} />
+              </div>
+            </a>
           </Link>
         )
       })}

@@ -1,0 +1,30 @@
+.album_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin-top: 70px;
+}
+
+.name_picture {
+  position: relative;
+  display: flex;
+
+  h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 400px;
+    transform: translateX(350px);
+    text-align: right;
+    background-color: black;
+    color: white;
+    padding: 0 45px;
+  }
+
+  img {
+    width: 390px;
+    height: 390px;
+    border-radius: 50%;
+  }
+}

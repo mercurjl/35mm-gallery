@@ -13,21 +13,25 @@ const PhotographersGrid = ({ photographers }) => {
         return (
           <div className={styles.photographer_card} key={index}>
             {photographer.profilePicture &&
-              <Link href={`/photographer/${photographer.slug}`}>
-                <img className={styles.profile_picture} src={photographer.profilePicture.url} alt={photographer.profilePicture.title} />
-              </Link>
+              <div className={styles.profile_picture}>
+                <Link href={`/photographer/${photographer.slug}`}>
+                  <a>
+                    <img src={photographer.profilePicture.url} alt={photographer.profilePicture.title} />
+                  </a>
+                </Link>
+              </div>
             }
             <div className={styles.info_albums_wrapper}>
               <div>
                 <p className='md:text-3xl font-bold'>{photographer.name}</p>
                 <p className='pl-5'>{photographer.bio}</p>
               </div>
-              <AlbumGrid photographerSlug={photographer.slug} albums={photographer.albumsCollection.items} />
+              <AlbumGrid photographerSlug={`/photographer/${photographer.slug}`} albums={photographer.albumsCollection.items} />
             </div>
           </div>
         )
       })}
-    </div>
+    </div >
   )
 }
 
